@@ -1,4 +1,4 @@
-const HOST = "http://127.0.0.1:5000"
+const HOST = "https://api-link-manager.herokuapp.com"
 
 function requestUrl(url, type) {
     return $.ajax({
