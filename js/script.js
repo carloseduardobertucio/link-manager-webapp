@@ -60,6 +60,7 @@ $('#create-form').on("submit", function(event) {
 
     $('#create-label-input').val('')
     $('#create-url-input').val('')
+    loadLinks()
 })
 
 $('#edit-form').on("submit", function(event) {
@@ -75,6 +76,7 @@ $('#edit-form').on("submit", function(event) {
 
     $('#edit-label-input').val('')
     $('#edit-url-input').val('')
+    loadLinks()
 })
 
 $(document).on('click', '.remove-btn', function() {
@@ -83,6 +85,8 @@ $(document).on('click', '.remove-btn', function() {
     requestUrl(`${HOST}/link/delete?id=${link_id}`, "POST").done(function(response) {
         console.log(response)
     })
+    
+    loadLinks()
 })
 
 $(document).on('click', '.edit-btn', function() {
